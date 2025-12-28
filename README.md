@@ -48,6 +48,42 @@ npm run preview
 *   `src/views/`: Page components (Home, Apartment)
 *   `src/components/`: Reusable UI components (Amenities, Photos)
 *   `src/data.js`: Static data source for property details
+
+## Performance Stats
+
+**Mobile Analysis** (Dec 27, 2025)
+
+*   **Performance**: 83
+*   **Accessibility**: 87
+*   **Best Practices**: 100
+*   **SEO**: 100
+
+**Metrics**
+
+*   **First Contentful Paint (FCP)**: 2.6 s
+*   **Largest Contentful Paint (LCP)**: 3.6 s
+*   **Total Blocking Time (TBT)**: 10 ms
+*   **Cumulative Layout Shift (CLS)**: 0.063
+*   **Speed Index**: 4.5 s
+
+[View Full Report](https://pagespeed.web.dev/analysis/https-frontierpropertiesmn-com-pinecity/eg93xape7h?form_factor=mobile)
+
+**Desktop Analysis** (Dec 27, 2025)
+
+*   **Performance**: 98
+*   **Accessibility**: 87
+*   **Best Practices**: 100
+*   **SEO**: 92
+
+**Metrics**
+
+*   **First Contentful Paint (FCP)**: 0.7 s
+*   **Largest Contentful Paint (LCP)**: 0.8 s
+*   **Total Blocking Time (TBT)**: 0 ms
+*   **Cumulative Layout Shift (CLS)**: 0.003
+*   **Speed Index**: 1.2 s
+
+[View Full Report](https://pagespeed.web.dev/analysis/https-frontierpropertiesmn-com-pinecity/eg93xape7h?form_factor=desktop)
 *   `src/style.css`: Global styles and CSS variables
 
 # Frontier Properties Vue Redesign
