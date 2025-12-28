@@ -20,6 +20,7 @@
             <span class="brand">{{ data.name }}</span>
             <div class="links">
                 <a href="#features">Features</a>
+                <a href="#layouts">Layouts</a>
                 <a href="#neighborhood">Neighborhood</a>
                 <a href="#photos">Photos</a>
                 <a href="#contact">Contact</a>
@@ -39,6 +40,18 @@
         <!-- Features / Amenities -->
         <section id="features" class="section">
             <Amenities :amenities="data.amenities" />
+        </section>
+
+        <!-- Layouts -->
+        <section id="layouts" class="section" v-if="data.layouts">
+            <h2>Floor Plans & Layouts</h2>
+            <div class="layouts-grid">
+                <div v-for="(layout, index) in data.layouts.options" :key="index" class="layout-card">
+                    <h3>{{ layout.type }}</h3>
+                    <p class="sqft">{{ layout.sqft }} sq. ft.</p>
+                </div>
+            </div>
+            <p class="layout-subtext" v-if="data.layouts.subtext">{{ data.layouts.subtext }}</p>
         </section>
 
         <!-- Neighborhood -->
@@ -303,6 +316,42 @@ useHead({
     overflow: hidden;
     box-shadow: var(--shadow);
     border: 1px solid var(--border-color);
+}
+
+/* Layouts */
+.layouts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.layout-card {
+    background: var(--bg-surface);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.layout-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.layout-card .sqft {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-muted);
+}
+
+.layout-subtext {
+    text-align: center;
+    font-style: italic;
+    color: var(--text-muted);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Pets */
