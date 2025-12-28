@@ -1,7 +1,10 @@
 <template>
   <div v-if="data" class="apartment-page">
     <!-- Hero Section -->
-    <header class="hero" :style="{ backgroundImage: `url(${data.photoUrls[0]})` }">
+    <header class="hero" :style="{ 
+        backgroundImage: `url(${data.photoUrls[0]})`,
+        backgroundPosition: data.backgroundPosition || 'center'
+    }">
         <div class="hero-overlay">
             <div class="hero-content container">
                 <h1>{{ data.title }}</h1>
