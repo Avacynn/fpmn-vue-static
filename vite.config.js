@@ -12,6 +12,11 @@ export default defineConfig({
       registerType: 'autoUpdate',
       injectRegister: 'script-defer',
       includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
+      workbox: {
+        cleanupOutdatedCaches: true,
+        clientsClaim: true,
+        skipWaiting: true,
+      },
       manifest: {
         name: 'Frontier Properties',
         short_name: 'Frontier',
