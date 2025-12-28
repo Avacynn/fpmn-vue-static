@@ -49,6 +49,17 @@ npm run preview
 *   `src/components/`: Reusable UI components (Amenities, Photos)
 *   `src/data.js`: Static data source for property details
 
+## Optimizations & SEO
+
+To achieve high performance and SEO scores, the following strategies were implemented:
+
+*   **Resource Preloading**: Critical assets like the Pine City background image and Google Fonts are preloaded in `index.html` to minimize Largest Contentful Paint (LCP).
+*   **Non-blocking Fonts**: Google Fonts are loaded using a `preload` strategy with a fallback to `stylesheet` on load, preventing render-blocking behavior.
+*   **Script Deferral**: The Service Worker registration is set to `script-defer` in `vite.config.js` to ensure it doesn't compete with critical initial rendering resources.
+*   **Compression**: Gzip and Brotli compression are enabled via `vite-plugin-compression` to minimize asset transfer sizes.
+*   **PWA Support**: Integrated `vite-plugin-pwa` for offline capabilities and app-like installation.
+*   **SEO Meta Tags**: Comprehensive meta tags including `description`, `keywords`, and Open Graph (`og:`) tags are included for better search engine visibility and social sharing.
+
 ## Performance Stats
 
 **Mobile Analysis** (Dec 27, 2025)
