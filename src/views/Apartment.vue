@@ -4,7 +4,6 @@
     <header class="hero" :style="{ backgroundImage: `url(${data.photoUrls[0]})` }">
         <div class="hero-overlay">
             <div class="hero-content container">
-                <button class="back-btn" @click="$router.push('/')">← Back to Home</button>
                 <h1>{{ data.title }}</h1>
                 <p class="address">{{ data.address }}</p>
                 <div class="hero-actions">
@@ -193,22 +192,6 @@ useHead({
 .hero-content {
     width: 100%;
     text-align: center;
-}
-
-.back-btn {
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255,255,255,0.2);
-    color: var(--text-main);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    cursor: pointer;
-    margin-bottom: 2rem;
-    transition: all 0.3s;
-}
-
-.back-btn:hover {
-    background: rgba(255,255,255,0.1);
-    border-color: var(--primary-color);
 }
 
 .hero h1 {
