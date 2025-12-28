@@ -1,0 +1,12 @@
+feat: migrate from Angular to Vue.js framework
+
+- Added city data for Mora and Pine City apartments in `src/data.js`.
+- Removed Angular environment files (`environment.ts`, `environment.prod.ts`).
+- Deleted Angular-specific files including `index.html`, `main.ts`, `polyfills.ts`, and various TypeScript configuration files.
+- Introduced new Vue.js entry point in `src/main.js`.
+- Created Vue Router setup in `src/router.js` for navigation between home and apartment views.
+- Developed `Apartment.vue` and `Home.vue` components for apartment details and home page respectively.
+- Added global styles in `src/style.css` and removed Angular-specific styles.
+- Implemented responsive design and improved UI/UX for apartment listings.
+- Removed unnecessary test and TypeScript configuration files.
+- Set up Vite as the build tool with a basic configuration in `vite.config.js`.
