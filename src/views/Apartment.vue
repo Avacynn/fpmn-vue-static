@@ -118,12 +118,55 @@
 
 <script setup>
 import { computed } from 'vue'
+import { useHead } from '@vueuse/head'
 import { cityData } from '../data'
 import Amenities from '../components/Amenities.vue'
 import Photos from '../components/Photos.vue'
 
 const props = defineProps(['city'])
 const data = computed(() => cityData[props.city])
+
+useHead({
+  title: computed(() => data.value ? `Frontier Properties - ${data.value.title}` : 'Frontier Properties'),
+  meta: [
+    {
+      name: 'description',
+      content: computed(() => data.value ? data.value.welcomeText : 'Exceptional Living in Mora and Pine City, Minnesota.')
+    },
+    {
+      property: 'og:title',
+      content: computed(() => data.value ? `Frontier Properties - ${data.value.title}` : 'Frontier Properties')
+    },
+    {
+      property: 'og:description',
+      content: computed(() => data.value ? data.value.welcomeText : 'Exceptional Living in Mora and Pine City, Minnesota.')
+    },
+    {
+      property: 'og:image',
+      content: computed(() => data.value ? data.value.photoUrls[0] : '/assets/img/pinecity/pinecity-bg.png')
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: computed(() => `https://frontierpropertiesmn.com/${props.city}`)
+    }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: computed(() => JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'ApartmentComplex',
+        'name': data.value?.name,
+        'description': data.value?.welcomeText,
+        'address': data.value?.address,
+        'image': data.value?.photoUrls,
+        'url': `https://frontierpropertiesmn.com/${props.city}`
+      }))
+    }
+  ]
+})
 </script>
 
 <style scoped>

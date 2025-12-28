@@ -1,3 +1,35 @@
+<script setup>
+import { useHead } from '@vueuse/head'
+
+useHead({
+  title: 'Frontier Properties - Home',
+  meta: [
+    {
+      name: 'description',
+      content: 'Exceptional Living in Mora and Pine City, Minnesota. Explore our properties today.'
+    },
+    {
+      property: 'og:title',
+      content: 'Frontier Properties - Home'
+    },
+    {
+      property: 'og:description',
+      content: 'Exceptional Living in Mora and Pine City, Minnesota. Explore our properties today.'
+    },
+    {
+      property: 'og:image',
+      content: '/assets/img/pinecity/pinecity-bg.png'
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://frontierpropertiesmn.com/'
+    }
+  ]
+})
+</script>
+
 <template>
   <div id="home">
     <div class="overlay">
