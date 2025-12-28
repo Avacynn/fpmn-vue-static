@@ -62,39 +62,39 @@ To achieve high performance and SEO scores, the following strategies were implem
 
 ## Performance Stats
 
-**Mobile Analysis** (Dec 27, 2025)
+**Mobile Analysis** (Dec 28, 2025)
 
-*   **Performance**: 83
-*   **Accessibility**: 87
+*   **Performance**: 84
+*   **Accessibility**: 86
 *   **Best Practices**: 100
-*   **SEO**: 100
+*   **SEO**: 92
 
 **Metrics**
 
 *   **First Contentful Paint (FCP)**: 2.6 s
 *   **Largest Contentful Paint (LCP)**: 3.6 s
 *   **Total Blocking Time (TBT)**: 10 ms
-*   **Cumulative Layout Shift (CLS)**: 0.063
-*   **Speed Index**: 4.5 s
+*   **Cumulative Layout Shift (CLS)**: 0.054
+*   **Speed Index**: 3.9 s
 
-[View Full Report](https://pagespeed.web.dev/analysis/https-frontierpropertiesmn-com-pinecity/eg93xape7h?form_factor=mobile)
+[View Full Report](https://pagespeed.web.dev/analysis/https-frontierpropertiesmn-com-pinecity/uwtgrm89ro?form_factor=mobile)
 
-**Desktop Analysis** (Dec 27, 2025)
+**Desktop Analysis** (Dec 28, 2025)
 
 *   **Performance**: 98
-*   **Accessibility**: 87
+*   **Accessibility**: 86
 *   **Best Practices**: 100
-*   **SEO**: 92
+*   **SEO**: 100
 
 **Metrics**
 
 *   **First Contentful Paint (FCP)**: 0.7 s
-*   **Largest Contentful Paint (LCP)**: 0.8 s
+*   **Largest Contentful Paint (LCP)**: 0.9 s
 *   **Total Blocking Time (TBT)**: 0 ms
 *   **Cumulative Layout Shift (CLS)**: 0.003
-*   **Speed Index**: 1.2 s
+*   **Speed Index**: 1.3 s
 
-[View Full Report](https://pagespeed.web.dev/analysis/https-frontierpropertiesmn-com-pinecity/eg93xape7h?form_factor=desktop)
+[View Full Report](https://pagespeed.web.dev/analysis/https-frontierpropertiesmn-com-pinecity/uwtgrm89ro?form_factor=desktop)
 *   `src/style.css`: Global styles and CSS variables
 
 # Frontier Properties Vue Redesign
