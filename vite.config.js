@@ -10,6 +10,7 @@ export default defineConfig({
     // PWA support
     VitePWA({
       registerType: 'autoUpdate',
+      injectRegister: 'script-defer',
       includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
       manifest: {
         name: 'Frontier Properties',
