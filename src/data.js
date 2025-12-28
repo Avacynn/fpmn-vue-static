@@ -57,11 +57,13 @@ export const cityData = {
       "options": [
         {
           "type": "1 Bedroom",
-          "sqft": "804"
+          "sqft": "804",
+          "image": "/assets/img/mora/layout.png"
         },
         {
           "type": "2 Bedroom",
-          "sqft": "894"
+          "sqft": "894",
+          "image": "/assets/img/mora/layout.png"
         }
       ]
     }
@@ -109,11 +111,13 @@ export const cityData = {
       "options": [
         {
           "type": "1 Bedroom",
-          "sqft": "830"
+          "sqft": "830",
+          "image": "/assets/img/pinecity/pinecity_floorplans_1br.png"
         },
         {
           "type": "2 Bedroom",
-          "sqft": "875"
+          "sqft": "875",
+          "image": "/assets/img/pinecity/pinecity_floorplans_2br.png"
         }
       ]
     }
