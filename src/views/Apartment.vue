@@ -192,6 +192,7 @@ useHead({
 
 .hero-content {
     width: 100%;
+    text-align: center;
 }
 
 .back-btn {
@@ -227,6 +228,7 @@ useHead({
 .hero-actions {
     display: flex;
     gap: 1rem;
+    justify-content: center;
 }
 
 .cta-btn {
@@ -327,6 +329,7 @@ useHead({
     padding: 1rem;
     margin: 1rem 0;
     border: 1px solid var(--border-color);
+    text-align: center;
 }
 
 .pet-info {
