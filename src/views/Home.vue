@@ -21,7 +21,7 @@
 
 <style scoped>
 #home {
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/frontier-properties.appspot.com/o/pinecity%2Fpinecity-bg.png?alt=media&token=41940b36-c2af-4f78-bbd6-d69639a70a99');
+    background-image: url('/assets/img/pinecity/pinecity-bg.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
