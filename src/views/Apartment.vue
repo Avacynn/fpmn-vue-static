@@ -9,9 +9,6 @@
             <div class="hero-content container">
                 <h1>{{ data.title }}</h1>
                 <p class="address">{{ data.address }}</p>
-                <p class="phone" v-if="data.phone">
-                    <a :href="'tel:' + data.phone.replace(/\D/g,'')">{{ data.phone }}</a>
-                </p>
                 <div class="hero-actions">
                     <a href="#contact" class="cta-btn">Schedule a Tour</a>
                     <a href="#photos" class="secondary-btn">View Photos</a>
@@ -30,6 +27,7 @@
                 <a href="#neighborhood">Neighborhood</a>
                 <a href="#photos">Photos</a>
                 <a href="#contact">Contact</a>
+                <a v-if="data.phone" :href="'tel:' + data.phone.replace(/\D/g,'')" class="phone-link">{{ data.phone }}</a>
             </div>
         </div>
     </nav>
@@ -222,23 +220,6 @@ useHead({
     color: var(--text-muted);
 }
 
-.phone {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-}
-
-.phone a {
-    color: var(--primary-color);
-    text-decoration: none;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-}
-
-.phone a:hover {
-    text-decoration: underline;
-    color: var(--primary-light);
-}
-
 .hero-actions {
     display: flex;
     gap: 1rem;
@@ -307,6 +288,11 @@ useHead({
 
 .links a:hover {
     color: var(--text-main);
+}
+
+.links .phone-link {
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 /* Sections */
