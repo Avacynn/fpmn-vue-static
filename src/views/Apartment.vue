@@ -45,19 +45,19 @@
         <!-- Neighborhood -->
         <section id="neighborhood" class="section">
             <h2>Neighborhood & Location</h2>
-            <div class="neighborhood-grid">
-                <div class="text-content">
+            <div class="neighborhood-content">
+                <div class="neighborhood-text">
                     <p>{{ data.neighborhoodText }}</p>
-                    <div class="map-container">
-                        <iframe 
-                            width="100%" 
-                            height="300" 
-                            frameborder="0" 
-                            style="border:0" 
-                            :src="data.googleMapsUrl" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
+                </div>
+                <div class="neighborhood-map">
+                    <iframe 
+                        width="100%" 
+                        height="350" 
+                        frameborder="0" 
+                        style="border:0" 
+                        :src="data.googleMapsUrl" 
+                        allowfullscreen>
+                    </iframe>
                 </div>
             </div>
         </section>
@@ -128,7 +128,7 @@ const data = computed(() => cityData[props.city])
 
 <style scoped>
 .apartment-page {
-    background-color: #f5f5f5;
+    background-color: var(--bg-body);
 }
 
 /* Hero Section */
@@ -137,11 +137,11 @@ const data = computed(() => cityData[props.city])
     background-size: cover;
     background-position: center;
     position: relative;
-    color: white;
+    color: var(--text-main);
 }
 
 .hero-overlay {
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8));
     height: 100%;
     display: flex;
     align-items: center;
@@ -152,9 +152,9 @@ const data = computed(() => cityData[props.city])
 }
 
 .back-btn {
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.5);
-    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--text-main);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     cursor: pointer;
@@ -164,20 +164,21 @@ const data = computed(() => cityData[props.city])
 
 .back-btn:hover {
     background: rgba(255,255,255,0.1);
-    border-color: white;
+    border-color: var(--primary-color);
 }
 
 .hero h1 {
     font-size: 3.5rem;
     margin: 0;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    color: var(--text-main);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
 
 .address {
     font-size: 1.5rem;
     opacity: 0.9;
     margin-bottom: 2rem;
+    color: var(--text-muted);
 }
 
 .hero-actions {
@@ -187,7 +188,7 @@ const data = computed(() => cityData[props.city])
 
 .cta-btn {
     background-color: var(--primary-color);
-    color: white;
+    color: #fff;
     padding: 1rem 2rem;
     border-radius: 50px;
     font-weight: bold;
@@ -195,32 +196,36 @@ const data = computed(() => cityData[props.city])
 }
 
 .cta-btn:hover {
-    background-color: var(--primary-dark);
+    background-color: var(--primary-light);
     transform: translateY(-2px);
+    text-decoration: none;
 }
 
 .secondary-btn {
-    background-color: white;
-    color: var(--text-color);
+    background-color: var(--bg-surface);
+    color: var(--text-main);
     padding: 1rem 2rem;
     border-radius: 50px;
     font-weight: bold;
     transition: transform 0.2s;
+    border: 1px solid var(--border-color);
 }
 
 .secondary-btn:hover {
     transform: translateY(-2px);
-    background-color: #f0f0f0;
+    background-color: var(--bg-surface-2);
+    text-decoration: none;
 }
 
 /* Sticky Nav */
 .sticky-nav {
     position: sticky;
     top: 0;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: var(--bg-surface);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     z-index: 100;
     padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .nav-content {
@@ -232,17 +237,17 @@ const data = computed(() => cityData[props.city])
 .brand {
     font-weight: bold;
     font-size: 1.2rem;
-    color: var(--primary-dark);
+    color: var(--primary-color);
 }
 
 .links a {
     margin-left: 2rem;
-    color: var(--text-color);
+    color: var(--text-muted);
     font-weight: 500;
 }
 
 .links a:hover {
-    color: var(--primary-color);
+    color: var(--text-main);
 }
 
 /* Sections */
@@ -251,15 +256,16 @@ const data = computed(() => cityData[props.city])
 }
 
 .card {
-    background: white;
+    background: var(--bg-surface);
     padding: 1rem;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
 }
 
 .lead {
     font-size: 1.2rem;
-    color: #555;
+    color: var(--text-muted);
 }
 
 /* Neighborhood */
@@ -268,14 +274,16 @@ const data = computed(() => cityData[props.city])
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
 }
 
 /* Pets */
 .highlight-section {
-    background-color: #e8f5e9;
+    background-color: var(--bg-surface-2);
     border-radius: var(--radius);
     padding: 1rem;
     margin: 1rem 0;
+    border: 1px solid var(--border-color);
 }
 
 .pet-info {
@@ -294,7 +302,7 @@ const data = computed(() => cityData[props.city])
 /* Contact */
 .contact-card {
     text-align: center;
-    background: linear-gradient(to bottom right, #ffffff, #f0f7f0);
+    background: linear-gradient(to bottom right, var(--bg-surface), var(--bg-surface-2));
 }
 
 .contact-actions {
@@ -314,23 +322,25 @@ const data = computed(() => cityData[props.city])
 }
 
 .pay-btn {
-    background-color: #333;
-    color: white;
+    background-color: var(--bg-surface-3);
+    color: var(--text-main);
     padding: 1rem 2rem;
     border-radius: 50px;
     font-weight: bold;
+    border: 1px solid var(--border-color);
 }
 
 .pay-btn:hover {
-    background-color: #000;
+    background-color: var(--primary-dark);
 }
 
 footer {
-    background: #333;
-    color: white;
+    background: var(--bg-surface);
+    color: var(--text-muted);
     padding: 1rem 0;
     text-align: center;
     margin-top: 0;
+    border-top: 1px solid var(--border-color);
 }
 
 @media (max-width: 768px) {

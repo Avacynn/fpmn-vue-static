@@ -44,7 +44,7 @@ defineProps(['amenities'])
 .intro-text {
     margin-bottom: 1rem;
     font-size: 1.1rem;
-    color: #555;
+    color: var(--text-muted);
 }
 
 .lists-wrapper {
@@ -54,11 +54,12 @@ defineProps(['amenities'])
 }
 
 .amenity-card {
-    background: white;
+    background: var(--bg-surface);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     overflow: hidden;
     transition: transform 0.3s;
+    border: 1px solid var(--border-color);
 }
 
 .amenity-card:hover {
@@ -66,14 +67,15 @@ defineProps(['amenities'])
 }
 
 .card-header {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--bg-surface-2);
+    color: var(--primary-color);
     padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .card-header h3 {
     margin: 0;
-    color: white;
+    color: var(--primary-color);
     font-size: 1.2rem;
 }
 
@@ -88,10 +90,11 @@ defineProps(['amenities'])
     display: flex;
     align-items: center;
     font-size: 1.1rem;
+    color: var(--text-main);
 }
 
 .check {
-    color: var(--accent-color);
+    color: var(--primary-color);
     font-weight: bold;
     margin-right: 10px;
     font-size: 1.2rem;
